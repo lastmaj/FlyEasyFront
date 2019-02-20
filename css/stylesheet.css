@@ -1,0 +1,475 @@
+
+
+body{
+	background-position: center;
+	background-size: cover;
+	font-family: "Source Sans Pro";
+	color:white;
+	padding: 0;
+	margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+
+h1{
+	font-weight: 700;
+	font-size: 5em;
+}
+
+html{
+	height: 100%; 
+}
+
+
+small {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  padding: 50px 0;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+  color: inherit;
+  font-size: 40px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 300;
+  color: inherit;
+  padding: 35px;
+}
+
+.center {
+  text-align: center;
+}
+
+section {
+  height: 100vh;
+}
+
+/* NAVIGATION */
+nav {
+  margin: 0 auto;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 ;
+  color: #949494!important;
+}
+
+.navbar{
+  background-color: transparent;
+}
+
+.navbar-default{
+  border-color: transparent;
+}
+
+.navbar-default .navbar-nav .active a{
+  background-color: bisque;
+}
+
+
+.navbar-default .navbar-nav a:hover {
+  color: #007fff !important; 
+}
+
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+#logo{
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  height: 100%
+}
+
+#li-logo{
+  width:298px;
+}
+
+/* stroke */
+nav.stroke ul li a,
+
+nav.fill ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+#overwrite li a {
+  color : gray;
+}
+
+
+/* SHIFT */
+nav.shift ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #91640F;
+}
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #F1C40F;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+
+/* footer */ 
+
+
+ 
+#footer {
+  background-color: #212121;
+} 
+
+
+#footer .container .row p{
+  color: gray ;
+}
+
+
+
+.sitemap-bloc{
+  margin:0 17.5px;
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+
+
+
+.sitemap-tab li a{
+  padding:0px;
+}
+
+.nav li a:hover{
+  background-color: transparent;
+}
+
+#footer-container{
+  padding-bottom: 25px;
+}
+
+
+
+#footer-navbar{
+  border-bottom: 1px solid rgba(128,128,128, 0.3);
+}
+
+#connect-bloc{
+  border-left: 1px solid rgba(128,128,128, 0.3);
+}
+
+#social-bloc{
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+#social-bloc a:hover{
+  text-decoration: none;
+}
+
+.social-icon{
+  margin-right: 4px;
+}
+
+
+
+.fab{
+  color: #23527c8a;
+}
+
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+
+/* flight tab */
+
+#flight-tab .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#flight-tab .tab-content {
+  color : white;
+  background-color: rgba(255, 255, 255, 0.45);
+  padding : 5px 15px;
+}
+
+
+a, a:before, a:after{
+  transition: all .3s;
+}
+
+.tab-pane{
+  margin: 15px;
+}
+
+/* one way inline form */
+
+#one-way-form input{
+  height: 40px;
+  width: 100%;
+}
+
+input, label{
+  display: block;
+}
+
+#one-way-form .form-group{
+  width: 100%;
+}
+
+#welcome-message{
+  border-bottom : 1px solid rgba(255, 255, 255, 0.45);
+  padding-bottom: 
+}
+
+/* background calque effect */
+
+#first-calque{
+  background: url(https://www.4kpapers.com/assets/2016/10/01/above-the-sky-wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: "Source Sans Pro";
+  color:white;
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* promotion tab */ 
+#promotion-tab{
+  background-color: #000a35ba;
+  margin-top: 300px;
+  padding-bottom: 35px;
+}
+
+#offers-icon{
+  background-image: url("https://www.cheapflights.com/res/images/horizon/common/frontdoor/brands/cheapflights/special-offers.svg?v=a617f55b4d10378005a953c6ce06974ec337f4bb\000026cluster=5");
+}
+
+#newsletter-icon{
+  background-image: url("https://www.cheapflights.com/res/images/horizon/common/frontdoor/brands/cheapflights/newsletter.svg?v=ebb57b26ce79d66c294ac4668f41e14a0c037188\000026cluster=5");
+}
+
+#tips-icon{
+  background-image: url("https://www.cheapflights.com/res/images/horizon/common/frontdoor/brands/cheapflights/travel-tips.svg?v=ba38b4dc3cdcb4f2a2a38052b1d7f6d6e6d3a4e7\000026cluster=5");
+}
+
+.promotion-icon{
+  height: 230px;
+  width: 217px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+#promotion-tab .description{
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 60px;
+}
+
+#promotion-tab .col-lg-4{
+  padding:0 40px;
+}
+
+/* why-us-tab */
+
+#why-us-tab{
+  color: black;
+}
+
+.why-us-card{
+  background-color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  margin: auto 14px;
+  padding: 24px;
+  border-radius: 7px;
+}
+
+/* second background style : solid color */
+#color-calque{
+  width: 100%;
+  background-color: rgba(241, 236, 236, 0.87);
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+#newsletter-calque{
+  width: 100%;
+  background-color: #337ab7;
+}
+
+#newsletter-calque h2{
+  padding-bottom: 0px;
+}
+
+#newsletter-calque .col-lg-6{
+  padding:5px;
+}
+
+#airlines > img{
+  display: block;
+  margin: auto;
+  padding: 0 50px;
+  vertical-align: middle;
+  margin-top: 35px;
+}
+
+#newsletter-tab h2{
+  padding-bottom: 35px;
+}
+
+#newsletter-email{
+  border-color: transparent;
+  border-radius: 4px;
+  height: 44px;
+  width: 450px;
+  line-height: 44px;
+  font-size: 16px;
+  box-shadow: none;
+  font-weight: 600;
+}
+
+#newsletter-email:focus{
+  border-color: transparent;
+}
+
+#newsletter-button{
+  height:44px;
+}
+
+.content-wrapper{
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+
+#numbers-tab{
+  padding: 50px 0px;    
+}
+

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Welcome to jQuery UI!</h1>
+
+  <div class="ui-widget">
+   <p>This page demonstrates the widgets and theme you selected in Download Builder. Please make sure you are using them with a compatible jQuery version.</p>
+ </div>
+
+ <h1>YOUR COMPONENTS:</h1>
+
+
+ <!-- Datepicker -->
+ <h2 class="demoHeaders">Datepicker</h2>
+ <div id="datepicker"></div>
+
+
+ <script src="external/jquery/jquery.js"></script>
+ <script src="jquery-ui.js"></script>
+ <script>
+
+  $( "#accordion" ).accordion();
+
+
+  $( "#datepicker" ).datepicker({
+   inline: true
+ });
+
+
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+  );
+</script>
+</body>
+</html>

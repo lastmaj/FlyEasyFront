@@ -1,0 +1,615 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+<title>Landing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
+<link href="css/jquery-ui.css" rel="stylesheet">
+
+</h:head>
+<h:body>
+<div id="first-calque">
+	<div>
+		<nav class="navbar navbar-default">
+			<div class="container" id="navbar-container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<ul class="nav navbar-nav navbar-left">
+						<li id="li-logo">	
+							<a href="#" class="navbar-left">
+								<img id="logo" src="https://www.ucuzabilet.com/resources/img/ub-ets-logo.svg"/>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Contact</a></li>
+						<li>
+							<a href="#">
+								<span>
+									<i class="fas fa-user-plus"></i>
+								</span>
+							Sign Up</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									<i class="fas fa-user"></i>
+								</span>
+							Login</a>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+	<div class="container" id="flight-tab">
+		<h1 id="welcome-message">
+			<div id="rotate-title">
+				<div>Hello travelers. Where would you like to go?
+				</div>
+				<div>Appease your wanderlust
+				</div>
+				<div>Care for a flight back home ?
+				</div>
+				<div>Domestic and International destinations
+				</div>
+			</div>
+		</h1>
+
+		<div class="row" style="margin-top:25px;">
+			<div class="col-xs-12">
+				<ul  class="nav nav-pills">
+					<li class="active">
+						<a  href="#one-way-tab" data-toggle="tab">One Way</a>
+					</li>
+					<li><a href="#round-trip-tab" data-toggle="tab">Round Trip</a>
+					</li>
+				</ul>
+
+				<div class="tab-content clearfix">
+					<div class="tab-pane active" id="one-way-tab">
+						<div class="row" style="padding: 5px 15px;">
+							<form class="form-inline" id="one-way-form">
+
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label for="one-way-from">From</label>
+										<input type="email" class="form-control" id="one-way-from" placeholder="City/Airport Name"/>
+									</div>
+								</div>
+
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label for="one-way-to">To</label>
+										<input type="text" class="form-control" id="one-way-to" placeholder="City/Airport Name"/>
+									</div>
+								</div>
+
+								<div class="col-lg-2">
+									<div class="form-group">
+										<label for="one-way-date">Departure</label>
+										<input type="text" class="form-control datepicker" placeholder="Departure"/>
+									</div>
+								</div>
+
+
+								<div class="col-lg-2">
+									<div class="form-group">
+										<label for="one-way-date">Travelers</label>
+										<input type="number" class="form-control" id="one-way-travelers" placeholder="1 Adult"/>
+									</div>
+								</div>
+
+								<div class="col-lg-2">
+									<button type="submit" style="height: 40px; margin-top: 25px;" class="btn btn-default">Search flights</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+
+
+
+					<div class="tab-pane" id="round-trip-tab">
+
+						<div class="row" style="padding: 5px 15px;">
+							<form class="form-inline" id="one-way-form">
+
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label for="one-way-from">From</label>
+										<input type="email" class="form-control" id="one-way-from" placeholder="City/Airport Name"/>
+									</div>
+								</div>
+
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label for="one-way-to">To</label>
+										<input type="text" class="form-control" id="one-way-to" placeholder="City/Airport Name"/>
+									</div>
+								</div>
+
+								<div class="col-lg-2">
+									<div class="form-group">
+										<label for="one-way-date">Departure</label>
+										<input type="text" class="form-control datepicker" id="two-way-dep" placeholder="Departure"/>
+									</div>
+									<div style="margin-top : 15px;" class="form-group">
+										<label for="one-way-date">Return</label>
+										<input type="text" class="form-control datepicker" id="two-way-ret" placeholder="Return"/>
+									</div>
+
+								</div>
+
+
+								<div class="col-lg-2">
+									<div class="form-group">
+										<label for="one-way-date">Travelers</label>
+										<input type="number" class="form-control" id="one-way-travelers" placeholder="1 Adult"/>
+									</div>
+								</div>
+
+								<div class="col-lg-2">
+									<button type="submit" style="height: 40px; margin-top: 25px;" class="btn btn-default">Search flights</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="promotion-tab">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2>We take care of more than just your ticket</h2> 
+				</div>
+				<div class="row" style="text-align:center;">
+					<div class="col-lg-4">
+						<h3>Campaigns and Deals</h3>
+						<div class="promotion-icon" id="offers-icon">
+						</div>
+						<div class="description">
+							<p>Save on flights, hotels, cruises, vacation packages and more.
+							</p>
+							<br/>
+							<button class="btn btn-default">See Campaigns and Offers</button>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<h3>Newsletter</h3>
+						<div class="promotion-icon" id="newsletter-icon">
+						</div>
+						<div class="description">
+							<p>Join for free and subscribe to our tailored newsletters full of hot travel deals</p>
+							<br/>
+							<button class="btn btn-default">Subscribe</button>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<h3>Travel tips and Inspiration</h3>
+						<div class="promotion-icon" id="tips-icon">
+						</div>
+						<div class="description">
+							<p>Tips, news and entertainment to make your next trip even better.</p>
+							<br/>
+							<button class="btn btn-default">Get Inspited</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="color-calque">
+	<div class="container" id="why-us-tab">
+		<div class="row" style="text-align: center;">
+			<h2>The most popular travel website</h2>
+			<p>Here are a few reasons why the Internet loves us</p>
+			<hr/>
+			<div class="col-lg-4">
+				<div class="why-us-card">
+					<i class="fas fa-money-bill-alt fa-7x"></i>
+					<hr/>
+					<p>No need to search elsewhere. We provide the best prices out there.</p>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="why-us-card">
+					<i class="far fa-lightbulb fa-7x"></i>
+					<hr/>
+					<p>Insider information, travel inspiration and trip planning tips you cannot find anywhere else.</p>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="why-us-card">
+					<i class="fas fa-suitcase fa-7x"></i>
+					<hr/>
+					<p>Low-cost car rental options, vacation packages, and more.</p>
+				</div>
+			</div>
+			<div class="row">
+				
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div id="newsletter-calque">
+	<div class="container">
+		<div class="row">
+			<h2>Your favorite destination, with your favorite airlines.</h2>
+
+			<div class="col-lg-6">
+				<h1 style="padding-left: 80px"> Fly to
+					<div id="rotate" style="display: inline-block; text-align: left; width: 200px"> 
+						<div>Istanbul</div>
+						<div>Los Angeles</div>
+						<div>New York</div>
+						<div>Prague</div>
+						<div>Rome</div>
+						<div>Barcelona</div>
+						<div>Marrakech</div>
+						<div>London</div>
+						<div>Cape Town</div>
+						<div>Brazilia</div>
+						<div>Tokyo</div>
+						<div>Paris</div>
+					</div> 
+				</h1>
+			</div>
+
+			<div class="col-lg-6" id="airlines">
+				<img src="./img/airlines.gif"/>
+			</div>
+		</div>
+		<hr style="margin: 0px"/>
+
+
+		<div class="row" id="newsletter-tab">
+			<div class="col-xs-12">
+				<h2>
+				Like travel deals? Enter your email and we'll send them your way.</h2>
+			</div>
+
+
+			<form class="form-inline">
+				<div class="col-lg-8" style="text-align: right;">
+					<div class="form-group">
+						<label class="sr-only" for="newsletter-email">Email Address</label>
+						<input type="email" class="form-control" id="newsletter-email" placeholder="Email"/>
+					</div>	
+				</div>
+
+				<div class="col-lg-4">
+					<button type="submit" class="btn btn-default" style="height: 44px">Send me Deals</button>
+				</div>
+			</form>
+
+
+		</div>
+		<div class="content-wrapper">
+			<p>Your privacy is important to us, so we'll never spam you or share your info with third parties.
+				<br/>Take a look at our privacy policy. And, we'd be sad to see you go, but you can unsubscribe at any time.
+			</p>
+		</div>
+
+	</div>
+</div>
+
+
+
+<div id="footer">
+	<div class="container" id="footer-container">
+		<div class="row">
+			<div class="col-lg-2 sitemap-bloc">
+				<p> Domestic popular cities </p>
+				<ul class= "nav sitemap-tab">
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Ankara
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Antalia
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Izmir
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Istanbul
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Trabzon
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-2 sitemap-bloc">
+				<p> International popular cities</p>
+				<ul class= "nav sitemap-tab">
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Paris
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Dubai
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Bangkok
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							London
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Kiev
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="col-lg-2 sitemap-bloc" id="bloc">
+				<p> Popular Airlines </p>
+				<ul class= "nav sitemap-tab">
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Turkish Airlines
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Sunexpress
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Onur Air
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Pegasus
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="col-lg-2 sitemap-bloc" id="bloc">
+				<p> Popular Destinations </p>
+				<ul class= "nav sitemap-tab">
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Ukraine
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Russia
+						</a>
+					</li>
+
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Maldives
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							France
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Japan
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-lg-2 sitemap-bloc" id="bloc">
+				<p> Services </p>
+				<ul class= "nav sitemap-tab">
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Mobile App
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Travel Tips 
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Campaigns
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>	
+
+		<div class="row" style="border-top: 1px solid rgba(128,128,128, 0.3);">
+			<div class="col-xs-7">
+				<ul class="nav navbar-nav" id="footer-navbar">
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							About us 
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Conditions & terms
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Privacy Policy
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Contact
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Blog
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Site Map
+						</a>
+					</li>
+					<li>
+						<a class="yt-footer__link" href="https://www.youtube.com/yt/jobs/">
+							Suggestions
+						</a>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="col-xs-5" id="connect-bloc">
+				<div class="row">
+					<div id="social-bloc" style="text-align: center;">
+						<p> Connect With Us </p>
+						<div class="row">
+							<div class="col-md-6 col-xs-12">
+								<a href="#">
+									<span class="social-icon">
+										<i class="fab fa-facebook-f"></i>
+									</span>
+								Facebook</a>
+							</div>
+							<div class="col-md-6 col-xs-12">
+								<a href="#">
+									<span class="social-icon">
+										<i class="fab fa-twitter"></i>
+									</span>
+								Twitter</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-xs-12">
+								<a href="#">
+									<span class="social-icon">
+										<i class="fab fa-youtube"></i>
+									</span>
+								Youtube</a>
+							</div>
+							<div class="col-md-6 col-xs-12">
+								<a href="#">
+									<span class="social-icon">
+										<i class="fab fa-tumblr"></i>
+									</span>
+								Tumblr</a>
+							</div>
+
+						</div>
+
+						<div class="row">
+							<div class="col-md-6 col-xs-12">
+								<a href="#">
+									<span class="social-icon">
+										<i class="fab fa-instagram"></i>
+									</span>
+								Instagram</a>
+							</div>
+							<div class="col-md-6 col-xs-12">
+								<a href="#">
+									<span class="social-icon">
+										<i class="fab fa-google-plus-g"></i>
+									</span>
+								Google</a>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/external/jquery/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+	
+
+	$( function() {
+		var dateFormat = "d M | yy"
+
+		$(".datepicker").datepicker({
+			dateFormat : dateFormat,
+			minDate: 0,
+			showButtonPanel: true,
+			numberOfMonths: 2,
+			defaultDate: 0,
+			maxDate: "+340d",
+		})
+
+		$("#two-way-dep").on("change", function(){
+			$("#two-way-ret").datepicker("option", "minDate", getDate(this));
+		})
+
+		function getDate(element){
+			var date;
+			try{
+				date = $.datepicker.parseDate(dateFormat, element.value);
+			} catch(error){
+				date = null;
+			}
+			return date;
+		}
+	});
+
+</script>
+<script type="text/javascript" src="js/script.js"></script>
+</h:body>
+</html>
+

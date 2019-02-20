@@ -1,0 +1,97 @@
+#content{
+	padding-top: 20%;
+	text-align: center;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+	0px 8px 13px rgba(0,0,0,0.1),
+	0px 18px 23px rgba(0,0,0,0.4);
+}
+
+body{
+	background: url("./img/above-the-sky.jpg");
+	background-size:cover;
+	background-position: center;
+	font-family: lato;
+	color:white;
+	padding-top:70 px;
+}
+
+h1{
+	font-weight: 700;
+	font-size:5em;
+}
+
+html{
+	height: 100%; 
+}
+
+hr{
+	width: 400px;
+	border-top:1px solid #F8F8F8;
+	border-bottom: solid rgba(0,0,0,0.2);
+}
+
+
+.navbar{
+	background-color: transparent;
+	min-height:38px !important ;
+	font-color:red;
+}
+
+.navbar-default .navbar-nav a:hover{
+	background-color: red !important;
+}
+.navbar-default .navbar-hovered a:hover{
+	background-color: #79cc98 !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color:#235d39 ;	
+}
+
+
+.navbar-button{
+	padding:10%;
+}
+
+
+.navbar-button {
+	position: relative;
+	float: left;
+	padding: 0 0px;
+	list-style: none;
+	font-weight:500;
+	font-size:14px;
+}
+
+#horizontal-line:after {
+	content: "";
+	background: #39965c;
+	position: absolute;
+	bottom: 25%;
+	left: 0;
+	height: 50%;
+	width: 1.2px;
+}
+
+#horizontal-line{
+	margin-right:1px;
+}
+
+.navbar-nav > li > a {
+	padding-top:5px !important; 
+	padding-bottom:5px !important;
+	margin: 5px 0.3px;
+	padding :10px 10px;
+}
+
+.navbar-default {
+	border-color: transparent;
+}
+
+i{
+	color:#235d39;
+}
+
+.payment-icon{
+	display: inline-block;
+}
